@@ -1,6 +1,6 @@
 <template>
-  <div class="lib-progress">
-    <div :class="['progress', progressColour]" :style="progressStyle"><div>{{percentageRounded}}%</div></div>
+  <div :class="['lib-progress', sizeStyle]">
+    <div :class="['progress', progressColour]" :style="progressStyle"><div v-if="text">{{percentageRounded}}%</div></div>
   </div>
 </template>
 
@@ -10,12 +10,20 @@
     components: {},
     props: {
       percentage: {
-        type: Number,
+        type: [Number, String],
         required: true,
       },
       status: {
         type: String,
         default: '',
+      },
+      size: {
+        type: String,
+        default: '',
+      },
+      text: {
+        type: Boolean,
+        default: false,
       },
     },
     data() {
@@ -40,9 +48,21 @@
         }
       },
       percentageRounded() {
-        if (this.percentage <= 0) return 0;
-        if (this.percentage >= 100) return 100;
-        return Math.round(this.percentage);
+        const p = +this.percentage;
+        if (p <= 0) return 0;
+        if (p >= 100) return 100;
+        return Math.round(p);
+      },
+      sizeStyle() {
+        const lower = this.size.toLowerCase();
+        switch (lower) {
+          case 'thin':
+            return 'thin';
+          case 'thick':
+            return 'thick';
+          default:
+            return undefined;
+        }
       },
     },
     methods: {},
@@ -54,17 +74,27 @@
   @import '../main.scss';
 
   .lib-progress {
-    height: 0.5rem;
+    font-size: 1.0rem;
+    height: 1.0rem;
     width: 100%;
     overflow: hidden;
     border: thin #222 solid;
-    border-radius: 1rem;
+    border-radius: 1em;
     background-color: #eee;
+
+    &.thin {
+      font-size: 0.5rem;
+      height: 0.5rem;
+    }
+    &.thick {
+      font-size: 1.5rem;
+      height: 1.5rem;
+    }
   }
   .progress {
     display: flex;
     height: 100%;
-    border-radius: 1rem;
+    border-radius: 1em;
     transition: width ease-in-out 0.1s;
     align-items: center;
     justify-content: flex-end;

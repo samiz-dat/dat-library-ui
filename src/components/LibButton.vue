@@ -1,8 +1,8 @@
 <template>
-  <div :class="['lib-button', statusStyle, typeStyle, sizeStyle]">
+  <Button :class="['lib-button', statusStyle, typeStyle, sizeStyle]" :type="type">
     <div v-if="icon" :class="['fa', iconName]"></div>
     <span v-if="$slots.default" class="content"><slot></slot></span>
-  </div>
+  </Button>
 </template>
 
 <script>
@@ -10,6 +10,10 @@
     name: 'LibProgress',
     components: {},
     props: {
+      type: {
+        type: String,
+        default: 'text',
+      },
       icon: {
         type: String,
       },
@@ -21,8 +25,9 @@
         type: String,
         default: '',
       },
-      type: {
-        type: String,
+      filled: {
+        type: Boolean,
+        default: false,
       },
     },
     data() {
@@ -33,7 +38,7 @@
         return `fa-${this.icon}`;
       },
       typeStyle() {
-        return this.type === 'primary' ? 'solid' : 'outline';
+        return this.filled ? 'solid' : 'outline';
       },
       statusStyle() {
         const lower = this.status.toLowerCase();
@@ -74,7 +79,7 @@
 
     }
 
-    div.lib-button {
+    button.lib-button {
       margin:0;
       border-radius: 0;
       &:last-of-type {
@@ -92,7 +97,7 @@
 <style lang="scss" scoped>
   @import '../main.scss';
 
-  div.lib-button {
+  button.lib-button {
     font-size: 1rem;
     transition: color ease-in-out 0.2s, background-color ease-in-out 0.2s, border-color ease-in-out 0.2s,;
     box-sizing: border-box;
@@ -101,6 +106,12 @@
     padding: 0.3em;
     margin-right: 0.5em;
     border: solid 1px black;
+
+    &:focus {
+      box-shadow: none;
+      outline-color: black;
+    }
+
     &:hover {
       cursor: pointer;
     }
