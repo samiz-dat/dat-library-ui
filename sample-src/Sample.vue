@@ -75,6 +75,20 @@
 </script>
 
 <style lang="css">
+  h1, h2, h3, h4 {
+    font-family: 'Crimson Text', serif;
+    font-weight: normal;
+    font-style: italic;
+  }
+  h3, h4 {
+    font-style: normal;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    text-rendering: optimizeLegibility;
+  }
+
   .lib-progress {
     margin: 0.5rem 0;
   }
