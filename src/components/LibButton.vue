@@ -48,11 +48,34 @@
 };
 </script>
 
+<style lang="scss">
+  div.lib-button-group {
+    font-size: 0;
+    &:first-child {
+
+    }
+
+    div.lib-button {
+      margin:0;
+      border-radius: 0;
+      &:last-of-type {
+        border-bottom-right-radius: 0.2rem;
+        border-top-right-radius: 0.2rem;
+      }
+      &:first-of-type {
+        border-bottom-left-radius: 0.2rem;
+        border-top-left-radius: 0.2rem;
+      }
+    }
+  }
+</style>
+
 <style lang="scss" scoped>
   @import '../main.scss';
 
   div.lib-button {
-    transition: color ease-in-out 0.2s, background-color ease-in-out 0.2s;
+    font-size: 1rem;
+    transition: color ease-in-out 0.2s, background-color ease-in-out 0.2s, border-color ease-in-out 0.2s,;
     box-sizing: border-box;
     display: inline-block;
     border-radius: 0.2rem;
