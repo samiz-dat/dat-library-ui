@@ -1,6 +1,6 @@
 {
   "name": "dat-library-ui",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A number of generic ui elements for Dat Library",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,14 @@
     "dev:rollup": "rollup -c -w",
     "dev:sample": "webpack-dev-server --host 0.0.0.0 --hot --config webpack.config.js"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/e-e-e/dat-library-ui"
+  },
+  "author": "Benjamin Forster",
+  "dependencies": {
+    "vue": "^2.4.2"
+  },
   "devDependencies": {
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.0.0",
@@ -62,8 +69,5 @@
     "webpack-hot-middleware": "^2.18.0",
     "webpack-merge": "^4.1.0"
   },
-  "license": "ISC",
-  "dependencies": {
-    "vue": "^2.4.2"
-  }
+  "license": "ISC"
 }
