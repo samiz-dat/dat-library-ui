@@ -11,6 +11,7 @@ export default {
       extensions: ['.js', '.json', '.vue'],
     }),
     vue({
+      css: './dist/styles.css',
       scss: true,
     }),
   ],

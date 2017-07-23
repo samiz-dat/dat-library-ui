@@ -1,15 +1,9 @@
 import Vue from 'vue';
 import Sample from './Sample';
-import DatLibUI from '../dist/bundle.js';
-import '../dist/bundle.css';
+import DatLibUI from '../index.js';
+import '../dist/styles.css';
 
-Vue.use({ install(v, options) {
-  v.mixin({
-    components: {
-      LibProgress: DatLibUI.LibProgress,
-    },
-  });
-}});
+Vue.use(DatLibUI);
 
 /* eslint-disable no-new */
 new Vue({
