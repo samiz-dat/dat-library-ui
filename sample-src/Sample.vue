@@ -40,6 +40,14 @@
       <lib-button icon="external-link-square" status="warning" />
       <lib-button icon="pencil" />
     </div>
+    <h3>with size: </h3>
+    <div>
+      <lib-button icon="bookmark" status="primary" size='x-large'>x-large</lib-button>
+      <lib-button icon="bookmark" status="primary" size='large'>large</lib-button>
+      <lib-button icon="bookmark" status="primary">Normal</lib-button>
+      <lib-button icon="bookmark" status="primary" size='small'>small</lib-button>
+      <lib-button icon="bookmark" status="primary" size='x-small'>x-small</lib-button>
+    </div>
     <h3>grouped:</h3>
     <lib-button-group>
       <lib-button status='success' type="primary">one</lib-button>

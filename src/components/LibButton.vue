@@ -1,5 +1,5 @@
 <template>
-  <div :class="['lib-button', statusStyle, typeStyle]">
+  <div :class="['lib-button', statusStyle, typeStyle, sizeStyle]">
     <div v-if="icon" :class="['fa', iconName]"></div>
     <span v-if="$slots.default" class="content"><slot></slot></span>
   </div>
@@ -14,6 +14,10 @@
         type: String,
       },
       status: {
+        type: String,
+        default: '',
+      },
+      size: {
         type: String,
         default: '',
       },
@@ -43,6 +47,21 @@
             return 'normal';
         }
       },
+      sizeStyle() {
+        const lower = this.size.toLowerCase();
+        switch (lower) {
+          case 'small':
+            return 's';
+          case 'x-small':
+            return 'xs';
+          case 'large':
+            return 'l';
+          case 'x-large':
+            return 'xl';
+          default:
+            return undefined;
+        }
+      },
     },
     methods: {},
 };
@@ -59,12 +78,12 @@
       margin:0;
       border-radius: 0;
       &:last-of-type {
-        border-bottom-right-radius: 0.2rem;
-        border-top-right-radius: 0.2rem;
+        border-bottom-right-radius: 0.2em;
+        border-top-right-radius: 0.2em;
       }
       &:first-of-type {
-        border-bottom-left-radius: 0.2rem;
-        border-top-left-radius: 0.2rem;
+        border-bottom-left-radius: 0.2em;
+        border-top-left-radius: 0.2em;
       }
     }
   }
@@ -78,12 +97,25 @@
     transition: color ease-in-out 0.2s, background-color ease-in-out 0.2s, border-color ease-in-out 0.2s,;
     box-sizing: border-box;
     display: inline-block;
-    border-radius: 0.2rem;
-    padding: 0.3rem;
-    margin-right: 0.5rem;
+    border-radius: 0.2em;
+    padding: 0.3em;
+    margin-right: 0.5em;
     border: solid 1px black;
     &:hover {
       cursor: pointer;
+    }
+
+    &.xl {
+      font-size: 1.5rem;
+    }
+    &.l {
+      font-size: 1.2rem;
+    }
+    &.s {
+      font-size: 0.8rem;
+    }
+    &.xs {
+      font-size: 0.65rem;
     }
 
     &.solid {
@@ -154,13 +186,13 @@
     }
 
     &:last-of-type {
-      margin-right: 0.0rem;
+      margin-right: 0.0em;
     }
 
     .fa {
       display: inline-block;
       & + .content {
-        margin-left: 0.25rem;
+        margin-left: 0.25em;
       }
 
     }
