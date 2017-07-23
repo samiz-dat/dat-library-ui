@@ -19,7 +19,7 @@ const atImport = require('postcss-import');
 
 const config = {
   devtool: '#cheap-module-eval-source-map',
-  entry: path.join(__dirname, './index.js'),
+  entry: path.join(__dirname, './sample-src/index.js'),
   module: {
     rules: [
       {
@@ -92,7 +92,7 @@ const config = {
     new ExtractTextPlugin('styles.css'),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: path.resolve(__dirname, './index.ejs'),
+      template: path.resolve(__dirname, './sample-src/index.ejs'),
       minify: {
         collapseWhitespace: true,
         removeAttributeQuotes: true,
@@ -104,7 +104,7 @@ const config = {
   ],
   output: {
     filename: '[name].js',
-    path: path.join(__dirname, './dist/'),
+    path: path.join(__dirname, './docs/'),
   },
   resolve: {
     alias: {

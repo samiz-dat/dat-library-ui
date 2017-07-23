@@ -1,5 +1,5 @@
 <template>
-  <div id="example">
+  <div id="sample">
     <lib-progress :percentage="percentage" status="success"></lib-progress>
     <lib-progress :percentage="percentage" status="primary"></lib-progress>
     <lib-progress :percentage="percentage" status="warning"></lib-progress>
@@ -9,13 +9,8 @@
 </template>
 
 <script>
-  import LibProgress from './components/LibProgress';
-
   export default {
-    name: 'Example',
-    components: {
-      LibProgress,
-    },
+    name: 'Sample',
     created() {
       setInterval(this.incrementPercentage, 66);
     },
