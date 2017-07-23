@@ -4,6 +4,7 @@
   "description": "A number of generic ui elements for Dat Library",
   "main": "index.js",
   "scripts": {
+    "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build:rollup; npm run build:sample",
     "build:rollup": "cross-env NODE_ENV=production rollup -c",
