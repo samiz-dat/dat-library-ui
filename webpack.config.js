@@ -24,10 +24,7 @@ const config = {
     rules: [
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader',
-        }),
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.html$/,

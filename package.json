@@ -10,7 +10,7 @@
     "build:sample": "cross-env NODE_ENV=production webpack --progress --colors --config webpack.config.js",
     "dev": "concurrently -k \"npm run dev:rollup\" \"npm run dev:sample\" -n rollup,webpack",
     "dev:rollup": "rollup -c -w",
-    "dev:sample": "webpack-dev-server --host 0.0.0.0 --hot --config webpack.config.js"
+    "dev:sample": "webpack-dev-server --inline --host 0.0.0.0 --hot --config webpack.config.js"
   },
   "repository": {
     "type": "git",

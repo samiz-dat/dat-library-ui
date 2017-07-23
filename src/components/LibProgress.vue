@@ -50,6 +50,9 @@
 </script>
 
 <style lang="scss" scoped>
+
+  @import '../main.scss';
+
   .lib-progress {
     height: 0.5rem;
     width: 100%;
@@ -72,23 +75,23 @@
     }
   }
   .success {
-    background-color: #13CE66;
+    background-color: $success;
     color: white;
   }
   .primary {
-    background-color: #20A0FF;
+    background-color: $primary;
     color: white;
   }
   .warning {
-    background-color: #F7BA2A;
+    background-color: $warning;
     color: white;
   }
   .danger {
-    background-color: #FF4949;
+    background-color: $danger;
     color: white;
   }
   .normal {
-    background-color: #222;
+    background-color: $normal;
     color: white;
   }
 </style>

@@ -9,6 +9,35 @@
     <lib-progress :percentage="percentage" status="warning"></lib-progress>
     <lib-progress :percentage="percentage" status="danger"></lib-progress>
     <lib-progress :percentage="percentage"></lib-progress>
+    <h2>Buttons: </h2>
+    <div>
+      <lib-button status='success'>Something</lib-button>
+      <lib-button status='primary'>Something</lib-button>
+      <lib-button status='warning'>Something</lib-button>
+      <lib-button status='danger'>Something</lib-button>
+      <lib-button>Something</lib-button>
+    </div>
+    <div>
+      <lib-button status='success' type="primary">Something</lib-button>
+      <lib-button status='primary' type="primary">Something</lib-button>
+      <lib-button status='warning' type="primary">Something</lib-button>
+      <lib-button status='danger' type="primary">Something</lib-button>
+      <lib-button type="primary">Something</lib-button>
+    </div>
+    <h2>Buttons with icons: </h2>
+    <div>
+      <lib-button icon="bookmark" type="primary" status="success">bookmark</lib-button>
+      <lib-button icon="search" type="primary" status="primary">search</lib-button>
+      <lib-button icon="external-link-square" status="warning">open</lib-button>
+      <lib-button icon="pencil">Something</lib-button>
+    </div>
+    <h2>Buttons with only icons: </h2>
+    <div>
+      <lib-button icon="bookmark" type="primary" status="success" />
+      <lib-button icon="search" type="primary" status="primary" />
+      <lib-button icon="external-link-square" status="warning" />
+      <lib-button icon="pencil" />
+    </div>
   </div>
 </template>
 
