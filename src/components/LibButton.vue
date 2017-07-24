@@ -1,6 +1,6 @@
 <template>
   <Button :class="['lib-button', statusStyle, typeStyle, sizeStyle]" :type="type">
-    <div v-if="icon" :class="iconName"></div>
+    <div v-if="icon" :class="['fa', iconName]"></div>
     <span v-if="$slots.default" class="content"><slot></slot></span>
   </Button>
 </template>

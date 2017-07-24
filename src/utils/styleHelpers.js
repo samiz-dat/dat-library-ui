@@ -28,6 +28,6 @@ export function getSizeStyle(size) {
   }
 }
 
-export getIconName(name) {
-  return `fa fa-${name}`;
+export function getIconName(name) {
+  return `fa-${name}`;
 }
