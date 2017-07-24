@@ -19,6 +19,7 @@
   },
   "author": "Benjamin Forster",
   "dependencies": {
+    "lodash": "^4.17.4",
     "vue": "^2.4.2"
   },
   "devDependencies": {
@@ -46,6 +47,7 @@
     "html-webpack-plugin": "^2.16.1",
     "inject-loader": "^3.0.0",
     "json-loader": "^0.5.4",
+    "lodash": "^4.17.4",
     "node-sass": "^4.5.3",
     "postcss-cssnext": "^3.0.2",
     "postcss-import": "^10.0.0",
@@ -68,7 +70,8 @@
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.3.0",
     "webpack-hot-middleware": "^2.18.0",
-    "webpack-merge": "^4.1.0"
+    "webpack-merge": "^4.1.0",
+    "xtend": "^4.0.1"
   },
   "license": "ISC"
 }

@@ -4,11 +4,15 @@ import vue from 'rollup-plugin-vue';
 
 export default {
   entry: 'src/main.js',
-  format: 'cjs',
+  format: 'es',
+  // moduleName: 'dat-library-ui',
   plugins: [
     commonjs(),
     resolve({
       extensions: ['.js', '.json', '.vue'],
+      customResolveOptions: {
+        moduleDirectory: 'node_modules',
+      },
     }),
     vue({
       css: './dist/styles.css',
@@ -16,5 +20,6 @@ export default {
     }),
   ],
   dest: 'dist/bundle.js',
+  external: ['lodash'],
   sourceMap: process.env.NODE_ENV !== 'production',
 };
