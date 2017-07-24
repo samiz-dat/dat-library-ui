@@ -5,6 +5,7 @@
 </template>
 
 <script>
+  import { getStatusStyle } from '../utils/styleHelpers';
   export default {
     name: 'LibProgress',
     components: {},
@@ -35,18 +36,7 @@
           width: `${this.percentageRounded}%`,
         };
       },
-      progressColour() {
-        const lower = this.status.toLowerCase();
-        switch (lower) {
-          case 'success':
-          case 'warning':
-          case 'danger':
-          case 'primary':
-            return lower;
-          default:
-            return 'normal';
-        }
-      },
+      progressColour() { return getStatusStyle(this.status); },
       percentageRounded() {
         const p = +this.percentage;
         if (p <= 0) return 0;

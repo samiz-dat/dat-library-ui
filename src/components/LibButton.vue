@@ -1,13 +1,15 @@
 <template>
   <Button :class="['lib-button', statusStyle, typeStyle, sizeStyle]" :type="type">
-    <div v-if="icon" :class="['fa', iconName]"></div>
+    <div v-if="icon" :class="iconName"></div>
     <span v-if="$slots.default" class="content"><slot></slot></span>
   </Button>
 </template>
 
 <script>
+  import { getStatusStyle, getSizeStyle, getIconName } from '../utils/styleHelpers.js';
+
   export default {
-    name: 'LibProgress',
+    name: 'LibButton',
     components: {},
     props: {
       type: {
@@ -34,39 +36,12 @@
       return {};
     },
     computed: {
-      iconName() {
-        return `fa-${this.icon}`;
-      },
+      iconName() { return getIconName(this.icon); },
       typeStyle() {
         return this.filled ? 'solid' : 'outline';
       },
-      statusStyle() {
-        const lower = this.status.toLowerCase();
-        switch (lower) {
-          case 'success':
-          case 'warning':
-          case 'danger':
-          case 'primary':
-            return lower;
-          default:
-            return 'normal';
-        }
-      },
-      sizeStyle() {
-        const lower = this.size.toLowerCase();
-        switch (lower) {
-          case 'small':
-            return 's';
-          case 'x-small':
-            return 'xs';
-          case 'large':
-            return 'l';
-          case 'x-large':
-            return 'xl';
-          default:
-            return undefined;
-        }
-      },
+      statusStyle() { return getStatusStyle(this.status); },
+      sizeStyle() { return getSizeStyle(this.size); },
     },
     methods: {},
 };
