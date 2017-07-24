@@ -99,6 +99,7 @@
 
   button.lib-button {
     font-size: 1rem;
+    position: relative;
     transition: color ease-in-out 0.2s, background-color ease-in-out 0.2s, border-color ease-in-out 0.2s,;
     box-sizing: border-box;
     display: inline-block;
@@ -109,7 +110,8 @@
 
     &:focus {
       box-shadow: none;
-      outline-color: black;
+      outline: none;
+      text-decoration: underline;
     }
 
     &:hover {
@@ -153,19 +155,19 @@
         border-color: $normal;
         background-color: $normal;
       }
-      &.success:hover {
+      &.success:hover, &.success:focus {
           background-color: transparentize($success, 0.3);
       }
-      &.warning:hover {
+      &.warning:hover, &.warning:focus {
           background-color: transparentize($warning, 0.3);
       }
-      &.danger:hover {
+      &.danger:hover, &.danger:focus {
           background-color: transparentize($danger, 0.3);
       }
-      &.primary:hover {
+      &.primary:hover, &.primary:focus {
           background-color: transparentize($primary, 0.3);
       }
-      &.normal:hover {
+      &.normal:hover, &.normal:focus {
           background-color: transparentize($normal, 0.3);
       }
     }
@@ -174,23 +176,23 @@
       background-color: white;
       color: $normal;
       border-color: $normal;
-      &.normal:hover {
+      &.normal:hover, &.normal:focus {
         background-color: $normal;
         color: white;
       }
-      &.success:hover {
+      &.success:hover, &.success:focus {
         color: $success;
         border-color: $success;
       }
-      &.warning:hover {
+      &.warning:hover, &.warning:focus {
         color: $warning;
         border-color: $warning;
       }
-      &.danger:hover {
+      &.danger:hover, &.danger:focus {
         color: $danger;
         border-color: $danger;
       }
-      &.primary:hover {
+      &.primary:hover, &.primary:focus {
         color: $primary;
         border-color: $primary;
       }
