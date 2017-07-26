@@ -1,6 +1,6 @@
 <template>
-  <pass-props class="lib-menu" :hello="router">
-    <slot />
+  <pass-props node="ul" class="lib-menu" hello="woooo">
+    <slot/>
   </pass-props>
 </template>
 

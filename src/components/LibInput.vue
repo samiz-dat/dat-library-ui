@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import { getStatusStyle, getSizeStyle } from '../utils/styleHelpers.js';
+  import { getStatusStyle, getSizeStyle, getIconName } from '../utils/styleHelpers.js';
 
   export default {
     name: 'LibInput',

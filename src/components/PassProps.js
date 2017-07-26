@@ -8,8 +8,8 @@ export default {
         return;
       }
       // const parentProps = props.reduce();
-      item.componentOptions.propsData = _.assign(item.componentOptions.propsData, _.omit(this.$attrs, ['class', 'id']));
+      item.componentOptions.propsData = _.assign(item.componentOptions.propsData, _.omit(this.$attrs, ['node', 'id']));
     });
-    return createElement('div', slots);
+    return createElement(this.$attrs.node || 'div', slots);
   },
 };

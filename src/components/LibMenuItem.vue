@@ -1,13 +1,14 @@
 <template>
-  <div>
+  <li>
     {{hello}}
-  </div>
+  </li>
 </template>
 
 <script>
   export default {
     name: 'LibMenu',
     components: {},
+    inheritAttrs: false,
     props: {
       hello: {
         type: String,
