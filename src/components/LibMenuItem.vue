@@ -1,18 +1,20 @@
 <template>
   <li>
-    {{hello}}
+    <a v-if="!router" :href="link"><slot/></a>
+    <router-link v-if="!!router" to="link"><slot/></router-link>
   </li>
 </template>
 
 <script>
   export default {
-    name: 'LibMenu',
-    components: {},
+    name: 'LibMenuItem',
     inheritAttrs: false,
     props: {
-      hello: {
+      link: {
         type: String,
-        default: 'damn',
+      },
+      router: {
+        type: Object,
       },
     },
     data() {

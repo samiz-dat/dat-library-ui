@@ -1,11 +1,11 @@
 <template>
-  <pass-props node="ul" class="lib-menu" hello="woooo">
+  <pass-props node="ul" class="lib-menu" :router="router">
     <slot/>
   </pass-props>
 </template>
 
 <script>
-  import PassProps from './PassProps';
+  import PassProps from 'vue-pass-props';
 
   export default {
     name: 'LibMenu',
