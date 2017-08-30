@@ -1,11 +1,17 @@
 <template>
-  <div :class="['lib-progress', sizeStyle]">
-    <div :class="['progress', progressColour]" :style="progressStyle"><div v-if="text">{{percentageRounded}}%</div></div>
+  <!-- //<div :class="['lib-progress', sizeStyle]"> -->
+  <div :class="['lib-progress', height, 'w-100 f5 br4 overflow-hidden bg-light-gray ba b--dark-gray']">
+    <div
+      :class="[progressColour, 'progress', 'flex items-center justify-end h-100 br4 lh-solid']"
+      :style="progressStyle"
+    >
+      <div v-if="text" class="f7 tr pv0 ph2 white">{{percentageRounded}}%</div>
+    </div>
   </div>
 </template>
 
 <script>
-  import { getStatusStyle } from '../utils/styleHelpers';
+  import { getStatusColour } from '../utils/styleHelpers';
   export default {
     name: 'LibProgress',
     components: {},
@@ -36,22 +42,22 @@
           width: `${this.percentageRounded}%`,
         };
       },
-      progressColour() { return getStatusStyle(this.status); },
+      progressColour() { return `bg-${getStatusColour(this.status)}`; },
       percentageRounded() {
         const p = +this.percentage;
         if (p <= 0) return 0;
         if (p >= 100) return 100;
         return Math.round(p);
       },
-      sizeStyle() {
+      height() {
         const lower = this.size.toLowerCase();
         switch (lower) {
           case 'thin':
-            return 'thin';
+            return 'h0_5';
           case 'thick':
-            return 'thick';
+            return 'h2';
           default:
-            return undefined;
+            return 'h1';
         }
       },
     },
@@ -59,60 +65,16 @@
 };
 </script>
 
+<style lang="scss">
+  //selectively import tachyons
+  @import '../../node_modules/tachyons-sass/tachyons.scss';
+</style>
 <style lang="scss" scoped>
-
-  @import '../main.scss';
-
-  .lib-progress {
-    font-size: 1.0rem;
-    height: 1.0rem;
-    width: 100%;
-    overflow: hidden;
-    border: thin #222 solid;
-    border-radius: 1em;
-    background-color: #eee;
-
-    &.thin {
-      font-size: 0.5rem;
-      height: 0.5rem;
-    }
-    &.thick {
-      font-size: 1.5rem;
-      height: 1.5rem;
-    }
+  .h0_5 {
+    height: 0.5rem;
   }
   .progress {
-    display: flex;
-    height: 100%;
-    border-radius: 1em;
     transition: width ease-in-out 0.1s;
-    align-items: center;
-    justify-content: flex-end;
-    & > div {
-      font-size: 0.6em;
-      text-align: right;
-      padding: 0 0.5em;
-    }
-  }
-  .success {
-    background-color: $success;
-    color: white;
-  }
-  .primary {
-    background-color: $primary;
-    color: white;
-  }
-  .warning {
-    background-color: $warning;
-    color: white;
-  }
-  .danger {
-    background-color: $danger;
-    color: white;
-  }
-  .normal {
-    background-color: $normal;
-    color: white;
   }
 </style>
 

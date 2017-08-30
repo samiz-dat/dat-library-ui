@@ -1,14 +1,22 @@
 
-export function getStatusStyle(status) {
+const statusMap = {
+  success: 'green',
+  warning: 'gold',
+  danger: 'dark-red',
+  primary: 'blue',
+  normal: 'dark-gray',
+};
+
+export function getStatusColour(status) {
   const lower = status.toLowerCase();
   switch (lower) {
     case 'success':
     case 'warning':
     case 'danger':
     case 'primary':
-      return lower;
+      return statusMap[lower];
     default:
-      return 'normal';
+      return statusMap.normal;
   }
 }
 
@@ -16,15 +24,15 @@ export function getSizeStyle(size) {
   const lower = size.toLowerCase();
   switch (lower) {
     case 'small':
-      return 's';
+      return 'f4';
     case 'x-small':
-      return 'xs';
+      return 'f5';
     case 'large':
-      return 'l';
+      return 'f2';
     case 'x-large':
-      return 'xl';
+      return 'f1';
     default:
-      return undefined;
+      return 'f3';
   }
 }
 

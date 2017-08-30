@@ -1,5 +1,5 @@
 <template>
-  <div id="sample">
+  <div id="sample" class="pa3">
     <h1>Dat Library UI</h1>
     <p>Dat Library UI is a collection of vue components built to be used with the <a href="https://github.com/e-e-e/dat-library">Dat Library</a>. Although built with Dat Library in mind, they have been built generically so that they can easily be used by any application looking for a simple set of common and reusable design elements. We built this collection because we could not find any library that exactly matched our needs.</p>
     <p><strong>This is a work in progress.</strong></p>
@@ -14,7 +14,9 @@
         <lib-menu-item link="#menu">Menu</lib-menu-item>
         <lib-menu-item link="#progress-bars">Progress Bars</lib-menu-item>
         <lib-menu-item link="#buttons">Buttons</lib-menu-item>
-
+        <lib-menu-item link="#menu">Menu</lib-menu-item>
+        <lib-menu-item link="#progress-bars">Progress Bars</lib-menu-item>
+        <lib-menu-item link="#buttons">Buttons</lib-menu-item>
       </lib-menu>
     </div>
     <h2 id="progress-bars">Progress bars:</h2>
@@ -79,10 +81,14 @@
     <lib-button-group>
       <lib-button>Works with one button</lib-button>
     </lib-button-group>
+    <h2>Notifications</h2>
+      <lib-button @click="openNotification">open</lib-button>
+      <a @click="openNotification">open</a>
   </div>
 </template>
 
 <script>
+
   export default {
     name: 'Sample',
     created() {
@@ -96,6 +102,10 @@
     methods: {
       incrementPercentage() {
         this.percentage = (this.percentage + 1) % 100;
+      },
+      openNotification() {
+        console.log('test');
+        this.$alert('This is a test');
       },
     },
   };

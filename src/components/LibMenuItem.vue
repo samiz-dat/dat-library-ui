@@ -1,8 +1,10 @@
 <template>
-  <li>
-    <a v-if="!router" :href="link"><slot/></a>
+  <div>
+    <a v-if="!router" class="athelas flex pv3 ph4 ttu tracked nowrap pink link dim pointer" :href="link">
+      <slot/>
+    </a>
     <router-link v-if="!!router" to="link"><slot/></router-link>
-  </li>
+  </div>
 </template>
 
 <script>
