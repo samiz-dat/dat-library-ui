@@ -74,7 +74,7 @@
     height: 0.5rem;
   }
   .progress {
-    transition: width ease-in-out 0.1s;
+    transition: width linear 0.1s;
   }
 </style>
 
