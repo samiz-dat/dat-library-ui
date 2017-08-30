@@ -18,15 +18,10 @@ export default {
         LibNotification,
       },
       methods: {
-        $alert(message) {
-          const propsData = {
-            title: 'test',
-            message,
-          };
-          console.log('alert', message);
+        $alert(options) {
           return new Notification({
             el: document.createElement('div'),
-            propsData,
+            propsData: options,
           });
         },
       },
