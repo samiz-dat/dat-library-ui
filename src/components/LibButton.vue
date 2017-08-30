@@ -1,19 +1,25 @@
 <template>
-  <Button :class="[backgroundColour, colour, sizeStyle, borderColour, 'link dim br2 ba bw1 pointer']" :type="type">
+  <Button
+    @click="action"
+    :class="[backgroundColour, colour, sizeStyle, borderColour, 'link dim br2 ba bw1 pointer']"
+    :type="type"
+  >
     <div v-if="icon" :class="['fa', iconName]"></div>
-    <span v-if="$slots.default" :class="['content', icon ? 'ml2' : '']"><slot></slot></span>
+    <span v-if="$slots.default" :class="['content', { ml2: icon }]">
+      <slot/>
+    </span>
   </Button>
 </template>
 
 <script>
   import { getStatusColour, getSizeStyle, getIconName } from '../utils/styleHelpers.js';
-
   export default {
     name: 'LibButton',
     components: {},
     props: {
       action: {
         type: Function,
+        default: () => {},
       },
       type: {
         type: String,

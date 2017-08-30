@@ -6,13 +6,13 @@
     name="fade"
     @after-leave="afterLeave"
   >
-  <div class="" v-if="show">
-    <button class="" @click="closedByUser()"></button>
-    <h2 class="" v-if="title">{{ title }}</h2>
-    <div v-if="html" v-html="message"></div>
-    <div v-else>{{ message }}</div>
-  </div>
-</transition>
+    <div class="relative db w5 pa3 ba bw1 mb1" v-if="show">
+      <div class="fa fa-close link dim pointer absolute top-0 right-0 pa1 ma1" @click="closedByUser()"></div>
+      <h1 class="f3 mt0" v-if="title">{{ title }}</h1>
+      <div v-if="html" v-html="message"></div>
+      <div v-else>{{ message }}</div>
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -53,7 +53,12 @@ export default {
           render(h) {
             return h('div', {
               class: {
-                [`${className}`]: true,
+                [className]: true,
+                fixed: true,
+                pt3: true,
+                pr3: true,
+                'top-0': true,
+                'right-0': true,
               },
             });
           },

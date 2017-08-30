@@ -82,7 +82,7 @@
       <lib-button>Works with one button</lib-button>
     </lib-button-group>
     <h2>Notifications</h2>
-      <lib-button @click="openNotification">open</lib-button>
+      <lib-button :action="openNotification">open</lib-button>
       <a @click="openNotification">open</a>
   </div>
 </template>
