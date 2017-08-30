@@ -3,21 +3,22 @@
 This is a work in progress.
 
 To do:
-[x] Progress Bar
-[x] Simple buttons
-[x] Dynamic Alerts
-[x] Basic Menu (still needs css)
-[] Active state for buttons (for selected items)
-[] Global Loader
-[] Radio Button
-[] Basic layout Components (eg sidebar, row, etc)
-[] Text inputs
-[] Pagination elements
-[] Pop up modal
-[] Badges (eg. for peer count etc)
-[] Accordion Item (for library data)
-[] Table structure (for displaying book/author data)
-[] ...
+
+- [x] Progress Bar
+- [x] Simple buttons
+- [x] Dynamic Alerts
+- [x] Basic Menu (still needs css)
+- [ ] Active state for buttons (for selected items)
+- [ ] Global Loader
+- [ ] Radio Button
+- [ ] Basic layout Components (eg sidebar, row, etc)
+- [ ] Text inputs
+- [ ] Pagination elements
+- [ ] Pop up modal
+- [ ] Badges (eg. for peer count etc)
+- [ ] Accordion Item (for library data)
+- [ ] Table structure (for displaying book/author data)
+- [ ] ...
 
 You can see all the available components [here](https://e-e-e.github.io/dat-library-ui/).
 
