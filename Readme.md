@@ -11,6 +11,7 @@ To do:
 - [ ] Active state for buttons (for selected items)
 - [ ] Global Loader
 - [ ] Radio Button
+- [ ] Check lists
 - [ ] Basic layout Components (eg sidebar, row, etc)
 - [ ] Text inputs
 - [ ] Pagination elements
@@ -18,6 +19,7 @@ To do:
 - [ ] Badges (eg. for peer count etc)
 - [ ] Accordion Item (for library data)
 - [ ] Table structure (for displaying book/author data)
+- [ ] Grouped Lists
 - [ ] ...
 
 You can see all the available components [here](https://e-e-e.github.io/dat-library-ui/).
