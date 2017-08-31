@@ -1,6 +1,7 @@
 import commonjs from 'rollup-plugin-commonjs';
 import resolve from 'rollup-plugin-node-resolve';
 import vue from 'rollup-plugin-vue';
+import copy from 'rollup-plugin-copy';
 
 export default {
   entry: 'src/main.js',
@@ -17,6 +18,9 @@ export default {
     vue({
       css: './dist/styles.css',
       scss: true,
+    }),
+    copy({
+      'node_modules/font-awesome/fonts': 'dist/fonts',
     }),
   ],
   dest: 'dist/bundle.js',

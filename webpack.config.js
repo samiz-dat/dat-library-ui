@@ -9,6 +9,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const cssnext = require('postcss-cssnext');
 const precss = require('precss');
 const atImport = require('postcss-import');
+
+const extractCSS = new ExtractTextPlugin('styles-lib.css');
+const extractVueCSS = new ExtractTextPlugin('styles-vue.css');
 /**
  * List of node_modules to include in webpack bundle
  *
@@ -24,7 +27,7 @@ const config = {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: extractCSS.extract({ fallback: 'style-loader', use: ['css-loader'] }),
       },
       {
         test: /\.html$/,
@@ -44,7 +47,7 @@ const config = {
         use: {
           loader: 'vue-loader',
           options: {
-            extractCSS: process.env.NODE_ENV === 'production',
+            extractCSS: process.env.NODE_ENV === 'production' && extractVueCSS,
             loaders: {
               sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax=1',
               scss: 'vue-style-loader!css-loader!sass-loader',
@@ -61,7 +64,18 @@ const config = {
       },
       {
         test: /\.svg$/,
+        exclude: [/fontawesome-webfont\.svg/],
         loader: 'vue-svg-loader',
+      },
+      {
+        test: [/\.(woff2?|eot|ttf|otf)(\?.*)?$/, /fontawesome-webfont\.svg/],
+        use: {
+          loader: 'url-loader',
+          query: {
+            limit: 10000,
+            name: 'fonts/[name].[ext]',
+          },
+        },
       },
       {
         test: /\.(png|jpe?g|gif)(\?.*)?$/,
@@ -73,20 +87,11 @@ const config = {
           },
         },
       },
-      {
-        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        use: {
-          loader: 'url-loader',
-          query: {
-            limit: 10000,
-            name: 'fonts/[name].[ext]',
-          },
-        },
-      },
     ],
   },
   plugins: [
-    new ExtractTextPlugin('styles.css'),
+    extractVueCSS,
+    extractCSS,
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: path.resolve(__dirname, './sample-src/index.ejs'),
@@ -102,6 +107,7 @@ const config = {
   output: {
     filename: '[name].js',
     path: path.join(__dirname, './docs/'),
+    // publicPath: process.env.NODE_ENV === 'production' ? './' : 'docs/',
   },
   resolve: {
     alias: {
