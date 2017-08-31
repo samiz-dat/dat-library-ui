@@ -24,15 +24,15 @@ export function getSizeStyle(size) {
   const lower = size.toLowerCase();
   switch (lower) {
     case 'small':
-      return 'f4';
-    case 'x-small':
       return 'f5';
+    case 'x-small':
+      return 'f6';
     case 'large':
-      return 'f2';
-    case 'x-large':
-      return 'f1';
-    default:
       return 'f3';
+    case 'x-large':
+      return 'f2';
+    default:
+      return 'f4';
   }
 }
 

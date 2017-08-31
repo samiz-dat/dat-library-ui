@@ -1,7 +1,14 @@
 <template>
   <Button
-    @click="action"
-    :class="[backgroundColour, colour, sizeStyle, borderColour, 'link dim br2 ba bw1 pointer']"
+    @click="handleClick"
+    :class="[
+      backgroundColour,
+      colour,
+      sizeStyle,
+      borderColour,
+      {'pointer': !active},
+      'link bg-animate br2 ba bw1'
+    ]"
     :type="type"
   >
     <div v-if="icon" :class="['fa', iconName]"></div>
@@ -17,10 +24,6 @@
     name: 'LibButton',
     components: {},
     props: {
-      action: {
-        type: Function,
-        default: () => {},
-      },
       type: {
         type: String,
         default: 'text',
@@ -40,6 +43,10 @@
         type: Boolean,
         default: false,
       },
+      active: {
+        type: Boolean,
+        default: false,
+      },
     },
     data() {
       return {};
@@ -47,30 +54,36 @@
     computed: {
       iconName() { return getIconName(this.icon); },
       colour() {
-        if (this.filled) {
-          return 'white';
+        const colour = getStatusColour(this.status);
+        if (!this.active) {
+          return (this.filled) ? `white hover-${colour}` : `${colour} hover-white`;
         }
-        return getStatusColour(this.status);
+        return (this.filled) ? colour : 'white';
       },
       backgroundColour() {
-        if (this.filled) {
-          return `bg-${getStatusColour(this.status)}`;
+        const colour = getStatusColour(this.status);
+        if (!this.active) {
+          return (this.filled) ? `bg-${colour} hover-bg-white` : `bg-white hover-bg-${colour}`;
         }
-        return 'bg-white';
+        return (this.filled) ? 'bg-white' : `bg-${colour}`;
       },
       borderColour() {
         return `b--${getStatusColour(this.status)}`;
       },
       sizeStyle() { return getSizeStyle(this.size); },
     },
-    methods: {},
+    methods: {
+      handleClick(e) {
+        this.$emit('click', e);
+      },
+    },
 };
 </script>
 
 <style lang="scss">
-  .pointer {
-    cursor: pointer;
-  }
+  // .pointer {
+  //   cursor: pointer;
+  // }
   div.lib-button-group {
     font-size: 0;
     .link {

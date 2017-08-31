@@ -8,7 +8,7 @@ To do:
 - [x] Simple buttons
 - [x] Dynamic Alerts
 - [x] Basic Menu (still needs css)
-- [ ] Active state for buttons (for selected items)
+- [x] Active state for buttons (for selected items)
 - [ ] Global Loader
 - [ ] Radio Button
 - [ ] Check lists

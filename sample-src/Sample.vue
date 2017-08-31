@@ -81,10 +81,24 @@
     <lib-button-group>
       <lib-button>Works with one button</lib-button>
     </lib-button-group>
+    <h3>with active state:</h3>
+    <lib-button-group>
+      <lib-button>one</lib-button>
+      <lib-button active>active</lib-button>
+      <lib-button>three</lib-button>
+      <lib-button>four</lib-button>
+      <lib-button>five</lib-button>
+    </lib-button-group>
+    <br/>
+    <lib-button status='primary'>one</lib-button>
+    <lib-button status='primary' active>active</lib-button>
+    <lib-button status='primary'>three</lib-button>
+    <lib-button status='primary'>four</lib-button>
+    <lib-button status='primary'>five</lib-button>
     <h2>Notifications</h2>
-      <lib-button :action="openTestAlert">alert</lib-button>
-      <lib-button :action="openQuickAlert">quick</lib-button>
-      <lib-button :action="openUserClickAlert">user has to click</lib-button>
+      <lib-button @click="openTestAlert">alert</lib-button>
+      <lib-button @click="openQuickAlert">quick</lib-button>
+      <lib-button @click="openUserClickAlert">user has to click</lib-button>
   </div>
 </template>
 
@@ -129,17 +143,17 @@
 </script>
 
 <style lang="css">
-  h1, h2, h3, h4 {
+  /*h1, h2, h3, h4 {
     font-family: 'Crimson Text', serif;
     font-weight: normal;
     font-style: italic;
   }
   h3, h4 {
     font-style: normal;
-  }
+  }*/
 
   body {
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     text-rendering: optimizeLegibility;
   }
 
