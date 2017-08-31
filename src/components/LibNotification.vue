@@ -6,7 +6,7 @@
     name="fade"
     @after-leave="afterLeave"
   >
-    <div class="relative db w5 pa3 ba bw1 mb1" v-if="show">
+    <div class="relative db w5 ph3 pv4 ba br2 bw1 mb1 bg-white" v-if="show">
       <div class="fa fa-close link dim pointer absolute top-0 right-0 pa1 ma1" @click="closedByUser()"></div>
       <h1 class="f3 mt0" v-if="title">{{ title }}</h1>
       <div v-if="html" v-html="message"></div>
