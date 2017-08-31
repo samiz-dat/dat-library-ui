@@ -1,8 +1,8 @@
 <template>
   <!-- //<div :class="['lib-progress', sizeStyle]"> -->
-  <div :class="['lib-progress', height, 'w-100 f5 br4 overflow-hidden bg-light-gray ba b--dark-gray']">
+  <div :class="['lib-progress', height, 'w-100 f5 br2 overflow-hidden bg-light-gray ba b--dark-gray']">
     <div
-      :class="[progressColour, 'progress', 'flex items-center justify-end h-100 br4 lh-solid']"
+      :class="[progressColour, 'progress', 'flex items-center justify-end h-100 br2 lh-solid']"
       :style="progressStyle"
     >
       <div v-if="text" class="f7 tr pv0 ph2 white">{{percentageRounded}}%</div>
