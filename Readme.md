@@ -9,7 +9,7 @@ To do:
 - [x] Dynamic Alerts
 - [x] Basic Menu (still needs css)
 - [x] Active state for buttons (for selected items)
-- [ ] Global Loader
+- [x] Global Loader
 - [ ] Radio Button
 - [ ] Check lists
 - [ ] Basic layout Components (eg sidebar, row, etc)
