@@ -4,6 +4,7 @@ import LibButtonGroup from './components/LibButtonGroup';
 import LibMenu from './components/LibMenu';
 import LibMenuItem from './components/LibMenuItem';
 import LibNotification from './components/LibNotification';
+import LibLoader from './components/LibLoader';
 
 export default {
   install(Vue) {
@@ -16,6 +17,7 @@ export default {
         LibMenu,
         LibMenuItem,
         LibNotification,
+        LibLoader,
       },
       methods: {
         $alert(options) {

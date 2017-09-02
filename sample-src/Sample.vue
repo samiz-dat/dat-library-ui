@@ -14,9 +14,8 @@
         <lib-menu-item link="#menu">Menu</lib-menu-item>
         <lib-menu-item link="#progress-bars">Progress Bars</lib-menu-item>
         <lib-menu-item link="#buttons">Buttons</lib-menu-item>
-        <lib-menu-item link="#menu">Menu</lib-menu-item>
-        <lib-menu-item link="#progress-bars">Progress Bars</lib-menu-item>
-        <lib-menu-item link="#buttons">Buttons</lib-menu-item>
+        <lib-menu-item link="#notifications">Notifications</lib-menu-item>
+        <lib-menu-item link="#loaders">Loaders</lib-menu-item>
       </lib-menu>
     </div>
     <h2 id="progress-bars">Progress bars:</h2>
@@ -95,10 +94,14 @@
     <lib-button status='primary'>three</lib-button>
     <lib-button status='primary'>four</lib-button>
     <lib-button status='primary'>five</lib-button>
-    <h2>Notifications</h2>
+    <h2 id="notifications">Notifications</h2>
       <lib-button @click="openTestAlert">alert</lib-button>
       <lib-button @click="openQuickAlert">quick</lib-button>
       <lib-button @click="openUserClickAlert">user has to click</lib-button>
+    <h2 id="loaders">Loading</h2>
+    <h3>a global loading screen</h3>
+    <lib-loader :loading="loading"/>
+    <lib-button @click="showGlobalLoading">Show the loader</lib-button>
   </div>
 </template>
 
@@ -111,6 +114,7 @@
     },
     data() {
       return {
+        loading: false,
         percentage: 0,
       };
     },
@@ -137,6 +141,13 @@
           message: 'You need to actively click this alert to make it disappear',
           duration: 0,
         });
+      },
+      cancelLoading() {
+        this.loading = false;
+      },
+      showGlobalLoading() {
+        this.loading = true;
+        setTimeout(() => this.cancelLoading(), 3000);
       },
     },
   };

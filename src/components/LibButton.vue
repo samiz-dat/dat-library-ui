@@ -81,9 +81,6 @@
 </script>
 
 <style lang="scss">
-  // .pointer {
-  //   cursor: pointer;
-  // }
   div.lib-button-group {
     font-size: 0;
     .link {
@@ -97,14 +94,6 @@
       &:last-of-type:not(:only-child) {
         border-bottom-left-radius: 0rem;
         border-top-left-radius: 0rem;
-      }
-    }
-    .link {
-      .fa {
-        display: inline-block;
-        & + .content {
-          margin-left: 0.25em;
-        }
       }
     }
   }
