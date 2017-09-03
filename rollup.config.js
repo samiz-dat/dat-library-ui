@@ -2,8 +2,8 @@ import commonjs from 'rollup-plugin-commonjs';
 import resolve from 'rollup-plugin-node-resolve';
 import vue from 'rollup-plugin-vue';
 import copy from 'rollup-plugin-copy';
-import test from './rollup-plugin-test';
-import vueSvg from './rollup-plugin-vue-inline-svg';
+// import test from './rollup-plugin-test';
+import vueSvg from 'rollup-plugin-vue-inline-svg';
 
 export default {
   entry: 'src/main.js',
