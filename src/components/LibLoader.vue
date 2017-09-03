@@ -3,7 +3,7 @@
     <div v-show="loading" class="flex fixed absolute--fill justify-center items-center bg-black white">
       <div class="pulse">
         <icon class="path-white w5"></icon>
-        <h1 class="white">Loading...</h1>
+        <h1 class="athelas tc ttu tracked white">Loading...</h1>
       </div>
     </div>
   </transition>
