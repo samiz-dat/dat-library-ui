@@ -1,6 +1,6 @@
 {
   "name": "dat-library-ui",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A number of generic ui elements for Dat Library",
   "main": "index.js",
   "scripts": {
