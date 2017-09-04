@@ -101,7 +101,12 @@
     <h2 id="loaders">Loading</h2>
     <h3>a global loading screen</h3>
     <lib-loader :loading="loading"/>
-    <lib-button @click="showGlobalLoading">Show the loader</lib-button>
+    <lib-button @click="showGlobalLoading">Show global loader</lib-button>
+    <h3>a relative loader</h3>
+    <lib-loader :loading="localLoading" class="w5 h5 ba pa2">
+      <p>must be in a relatively positioned container</p>
+      <lib-button @click="showLocalLoading">Show localized loader</lib-button>
+    </lib-loader>
   </div>
 </template>
 
@@ -115,6 +120,7 @@
     data() {
       return {
         loading: false,
+        localLoading: false,
         percentage: 0,
       };
     },
@@ -144,9 +150,14 @@
       },
       cancelLoading() {
         this.loading = false;
+        this.localLoading = false;
       },
       showGlobalLoading() {
         this.loading = true;
+        setTimeout(() => this.cancelLoading(), 5000);
+      },
+      showLocalLoading() {
+        this.localLoading = true;
         setTimeout(() => this.cancelLoading(), 3000);
       },
     },

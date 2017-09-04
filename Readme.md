@@ -10,6 +10,7 @@ To do:
 - [x] Basic Menu (still needs css)
 - [x] Active state for buttons (for selected items)
 - [x] Global Loader
+- [x] Relative Loader
 - [ ] Radio Button
 - [ ] Check lists
 - [ ] Basic layout Components (eg sidebar, row, etc)
