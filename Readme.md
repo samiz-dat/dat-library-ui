@@ -11,6 +11,7 @@ To do:
 - [x] Active state for buttons (for selected items)
 - [x] Global Loader
 - [x] Relative Loader
+- [x] Tags
 - [ ] Radio Button
 - [ ] Check lists
 - [ ] Basic layout Components (eg sidebar, row, etc)

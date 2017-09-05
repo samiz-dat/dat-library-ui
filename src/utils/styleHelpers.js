@@ -1,39 +1,37 @@
 
 const statusMap = {
-  success: 'green',
-  warning: 'gold',
-  danger: 'dark-red',
-  primary: 'blue',
-  normal: 'dark-gray',
+  standard: {
+    success: 'green',
+    warning: 'gold',
+    danger: 'dark-red',
+    primary: 'blue',
+    normal: 'dark-gray',
+  },
+  washed: {
+    success: 'light-green',
+    warning: 'light-yellow',
+    danger: 'washed-red',
+    primary: 'lightest-blue',
+    normal: 'moon-gray',
+  },
 };
 
-export function getStatusColour(status) {
+const sizeMap = {
+  'x-small': 'f6',
+  small: 'f5',
+  medium: 'f4',
+  large: 'f3',
+  'x-large': 'f2',
+};
+
+export function getStatusColour(status, type = 'standard') {
   const lower = status.toLowerCase();
-  switch (lower) {
-    case 'success':
-    case 'warning':
-    case 'danger':
-    case 'primary':
-      return statusMap[lower];
-    default:
-      return statusMap.normal;
-  }
+  return statusMap[type || 'standard'][lower || 'normal'];
 }
 
 export function getSizeStyle(size) {
   const lower = size.toLowerCase();
-  switch (lower) {
-    case 'small':
-      return 'f5';
-    case 'x-small':
-      return 'f6';
-    case 'large':
-      return 'f3';
-    case 'x-large':
-      return 'f2';
-    default:
-      return 'f4';
-  }
+  return sizeMap[lower || 'medium'];
 }
 
 export function getIconName(name) {

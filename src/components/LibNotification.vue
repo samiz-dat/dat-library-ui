@@ -18,6 +18,7 @@
 <script>
 import Vue from 'vue';
 export default {
+  name: 'LibNotification',
   props: {
     title: String,
     message: String,
@@ -41,7 +42,6 @@ export default {
     };
   },
   created() {
-    console.log('notification created');
     let parent = this.$parent;
     if (!parent) {
       const container = document.querySelector(this.container);
@@ -83,7 +83,6 @@ export default {
     }
   },
   destroyed() {
-    console.log('notification removed');
     this.$el.remove();
   },
   computed: {},

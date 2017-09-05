@@ -1,7 +1,24 @@
 <template>
-  <div>
-    <label :for="name"><div v-if="icon" :class="['fa', iconName]"></div></label>
-    <input :name="name" :type="type" />
+  <div class="dib ba bw1">
+    <label v-if="left && (icon || label)" :for="name">
+      <div v-if="icon" :class="['fa', iconName]"></div>
+      {{label}}
+    </label>
+    <input
+      :name="name"
+      :type="type"
+      :placeholder="placeholder"
+      :pattern="pattern"
+      :disabled="disabled"
+      :readonly="readonly"
+    />
+    <label
+      v-if="!left && (icon || label)"
+      :for="name"
+    >
+      <div v-if="icon" :class="['fa', iconName]"></div>
+      {{label}}
+    </label>
   </div>
 </template>
 
@@ -20,17 +37,15 @@
         type: String,
         default: 'text',
       },
-      icon: {
-        type: String,
-      },
-      status: {
-        type: String,
-        default: '',
-      },
-      size: {
-        type: String,
-        default: '',
-      },
+      label: String,
+      left: Boolean,
+      status: String,
+      size: String,
+      placeholder: String,
+      icon: String,
+      pattern: String,
+      disabled: Boolean,
+      readonly: Boolean,
     },
     data() {
       return {};
