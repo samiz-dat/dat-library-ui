@@ -12,6 +12,7 @@ To do:
 - [x] Global Loader
 - [x] Relative Loader
 - [x] Tags
+- [x] Form
 - [x] Text inputs
 - [ ] Text inputs (with button styling)
 - [ ] Radio Button

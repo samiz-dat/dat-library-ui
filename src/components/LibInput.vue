@@ -87,10 +87,10 @@
         this.setCurrentValue(value);
         this.$emit('change', value);
       },
-      handleFocus() {
+      handleFocus(event) {
         this.$emit('focus', event);
       },
-      handleBlur() {
+      handleBlur(event) {
         this.$emit('blur', event);
       },
       handleClick(event) {

@@ -7,6 +7,7 @@ import LibMenuItem from './components/LibMenuItem';
 import LibNotification from './components/LibNotification';
 import LibLoader from './components/LibLoader';
 import LibInput from './components/LibInput';
+import LibForm from './components/LibForm';
 
 
 export default {
@@ -23,6 +24,7 @@ export default {
         LibNotification,
         LibLoader,
         LibTag,
+        LibForm,
       },
       methods: {
         $alert(options) {

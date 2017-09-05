@@ -122,9 +122,9 @@
     <lib-tag size='x-small'>x-small</lib-tag>
     <h2 id="inputfields">Input fields</h2>
     <div class="mw6">
-      <lib-input type='text'></lib-input><br/>
-      <lib-input type='text' icon='search'></lib-input><br/>
-      <lib-input type='password' icon='key' label="Password"></lib-input><br/>
+      <lib-input type='text' placeholder='Enter some text'></lib-input>
+      <lib-input type='password' icon='key' label="Password"></lib-input>
+      <h3>can be bound using v-model:</h3>
       <lib-input
         type='number'
         icon='dollar'
@@ -133,7 +133,18 @@
         v-model="numberValue"
       />
       <p>this input is bound to {{numberValue}}.</p>
-    </div>
+      <h3>can submit a form</h3>
+      <lib-form @submit="handleSearchSubmit">
+        <lib-input
+          type='text'
+          icon='search'
+          v-model='search'
+          size='x-small'
+          placeholder='search for something'
+          v-on:click.stop.prevent="handleSearchSubmit($event)"
+        />
+      </lib-form>
+      </div>
 
   </div>
 </template>
@@ -151,6 +162,7 @@
         loading: false,
         localLoading: false,
         percentage: 0,
+        search: '',
       };
     },
     methods: {
@@ -188,6 +200,14 @@
       showLocalLoading() {
         this.localLoading = true;
         setTimeout(() => this.cancelLoading(), 3000);
+      },
+      handleSearchSubmit(event) {
+        console.log(event);
+        this.$alert({
+          title: 'Submitted with value',
+          message: this.search,
+          duration: 2000,
+        });
       },
     },
   };
