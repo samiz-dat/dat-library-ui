@@ -120,6 +120,11 @@
     <lib-tag>Normal</lib-tag>
     <lib-tag size='small'>small</lib-tag>
     <lib-tag size='x-small'>x-small</lib-tag>
+    <h2 id="inputfields">Input fields</h2>
+    <lib-input type='text'></lib-input>
+    <lib-input type='text' icon='search'></lib-input>
+    <lib-input type='password' icon='key' label="Password"></lib-input>
+    <lib-input type='text' icon='number'></lib-input>
 
   </div>
 </template>
