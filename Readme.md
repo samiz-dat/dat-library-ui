@@ -12,10 +12,11 @@ To do:
 - [x] Global Loader
 - [x] Relative Loader
 - [x] Tags
+- [x] Text inputs
+- [ ] Text inputs (with button styling)
 - [ ] Radio Button
 - [ ] Check lists
 - [ ] Basic layout Components (eg sidebar, row, etc)
-- [ ] Text inputs
 - [ ] Pagination elements
 - [ ] Pop up modal
 - [ ] Badges (eg. for peer count etc)
