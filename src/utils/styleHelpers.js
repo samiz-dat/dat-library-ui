@@ -24,12 +24,12 @@ const sizeMap = {
   'x-large': 'f2',
 };
 
-export function getStatusColour(status, type = 'standard') {
+export function getStatusColour(status = '', type = 'standard') {
   const lower = status.toLowerCase();
   return statusMap[type || 'standard'][lower || 'normal'];
 }
 
-export function getSizeStyle(size) {
+export function getSizeStyle(size = '') {
   const lower = size.toLowerCase();
   return sizeMap[lower || 'medium'];
 }

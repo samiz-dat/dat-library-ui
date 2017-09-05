@@ -121,10 +121,19 @@
     <lib-tag size='small'>small</lib-tag>
     <lib-tag size='x-small'>x-small</lib-tag>
     <h2 id="inputfields">Input fields</h2>
-    <lib-input type='text'></lib-input>
-    <lib-input type='text' icon='search'></lib-input>
-    <lib-input type='password' icon='key' label="Password"></lib-input>
-    <lib-input type='text' icon='number'></lib-input>
+    <div class="mw6">
+      <lib-input type='text'></lib-input><br/>
+      <lib-input type='text' icon='search'></lib-input><br/>
+      <lib-input type='password' icon='key' label="Password"></lib-input><br/>
+      <lib-input
+        type='number'
+        icon='dollar'
+        left
+        pattern="\d+"
+        v-model="numberValue"
+      />
+      <p>this input is bound to {{numberValue}}.</p>
+    </div>
 
   </div>
 </template>
@@ -138,6 +147,7 @@
     },
     data() {
       return {
+        numberValue: 0,
         loading: false,
         localLoading: false,
         percentage: 0,
@@ -198,7 +208,7 @@
     text-rendering: optimizeLegibility;
   }
 
-  .lib-progress {
+  .lib-progress, .lib-input {
     margin: 0.5rem 0;
   }
 </style>
