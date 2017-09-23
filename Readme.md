@@ -14,9 +14,11 @@ To do:
 - [x] Tags
 - [x] Form
 - [x] Text inputs
-- [ ] Text inputs (with button styling)
+- [x] Check lists (without style)
+- [ ] Style checkboxs
+- [ ] Add button style to text inputs
+- [ ] Selection
 - [ ] Radio Button
-- [ ] Check lists
 - [ ] Basic layout Components (eg sidebar, row, etc)
 - [ ] Pagination elements
 - [ ] Pop up modal
@@ -24,7 +26,9 @@ To do:
 - [ ] Accordion Item (for library data)
 - [ ] Table structure (for displaying book/author data)
 - [ ] Grouped Lists
+- [ ] Handle disabled and readonly styles for inputs
 - [ ] ...
+
 
 You can see all the available components [here](https://e-e-e.github.io/dat-library-ui/).
 

@@ -8,7 +8,8 @@ import LibNotification from './components/LibNotification';
 import LibLoader from './components/LibLoader';
 import LibInput from './components/LibInput';
 import LibForm from './components/LibForm';
-
+import LibCheckbox from './components/LibCheckbox';
+import LibCheckboxGroup from './components/LibCheckboxGroup';
 
 export default {
   install(Vue) {
@@ -25,6 +26,8 @@ export default {
         LibLoader,
         LibTag,
         LibForm,
+        LibCheckbox,
+        LibCheckboxGroup,
       },
       methods: {
         $alert(options) {

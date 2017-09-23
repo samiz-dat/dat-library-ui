@@ -1,5 +1,5 @@
 <template>
-  <pass-props node="div" class="bg-near-black white flex flex-row flex-nowrap justify-start" :router="router">
+  <pass-props node="div" class="bg-near-black white flex flex-row flex-wrap justify-start" :router="router">
     <slot/>
   </pass-props>
 </template>
