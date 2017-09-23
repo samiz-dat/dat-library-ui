@@ -1,33 +1,32 @@
-import LibProgress from './components/LibProgress';
-import LibButton from './components/LibButton';
-import LibButtonGroup from './components/LibButtonGroup';
-import LibTag from './components/LibTag';
-import LibMenu from './components/LibMenu';
-import LibMenuItem from './components/LibMenuItem';
-import LibNotification from './components/LibNotification';
-import LibLoader from './components/LibLoader';
-import LibInput from './components/LibInput';
-import LibForm from './components/LibForm';
-import LibCheckbox from './components/LibCheckbox';
-import LibCheckboxGroup from './components/LibCheckboxGroup';
+import Progress from './components/Progress';
+import Button from './components/Button';
+import ButtonGroup from './components/ButtonGroup';
+import Tag from './components/Tag';
+import Menu from './components/Menu';
+import MenuItem from './components/MenuItem';
+import Notification from './components/Notification';
+import Loader from './components/Loader';
+import Input from './components/Input';
+import Form from './components/Form';
+import Checkbox from './components/Checkbox';
+import CheckboxGroup from './components/CheckboxGroup';
 
 export default {
   install(Vue) {
-    const Notification = Vue.extend(LibNotification);
     Vue.mixin({
       components: {
-        LibProgress,
-        LibInput,
-        LibButton,
-        LibButtonGroup,
-        LibMenu,
-        LibMenuItem,
-        LibNotification,
-        LibLoader,
-        LibTag,
-        LibForm,
-        LibCheckbox,
-        LibCheckboxGroup,
+        LibProgress: Progress,
+        LibInput: Input,
+        LibButton: Button,
+        LibButtonGroup: ButtonGroup,
+        LibMenu: Menu,
+        LibMenuItem: MenuItem,
+        LibNotification: Vue.extend(Notification),
+        LibLoader: Loader,
+        LibTag: Tag,
+        LibForm: Form,
+        LibCheckbox: Checkbox,
+        LibCheckboxGroup: CheckboxGroup,
       },
       methods: {
         $alert(options) {
