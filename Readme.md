@@ -27,6 +27,7 @@ To do:
 - [ ] Table structure (for displaying book/author data)
 - [ ] Grouped Lists
 - [ ] Handle disabled and readonly styles for inputs
+- [ ] Code highlighting display element
 - [ ] ...
 
 
