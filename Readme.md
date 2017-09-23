@@ -15,9 +15,9 @@ To do:
 - [x] Form
 - [x] Text inputs
 - [x] Check lists (without style)
+- [x] Selection
 - [ ] Style checkboxs
-- [ ] Add button style to text inputs
-- [ ] Selection
+- [ ] Add button / hover style to inputs
 - [ ] Radio Button
 - [ ] Basic layout Components (eg sidebar, row, etc)
 - [ ] Pagination elements

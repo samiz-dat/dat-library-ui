@@ -13,6 +13,7 @@
         <lib-menu-item link="#loaders">Loaders</lib-menu-item>
         <lib-menu-item link="#tags">Tags</lib-menu-item>
         <lib-menu-item link="#inputfields">Inputs</lib-menu-item>
+        <lib-menu-item link="#selections">Selections</lib-menu-item>
         <lib-menu-item link="#checkboxs">Checkboxes</lib-menu-item>
       </lib-menu>
     </div>
@@ -22,6 +23,7 @@
     <loaders/>
     <tags/>
     <inputs/>
+    <selections/>
     <checkboxes/>
   </div>
 </template>
@@ -34,6 +36,7 @@
   import Tags from './components/Tags';
   import Inputs from './components/Inputs';
   import Checkboxes from './components/Checkboxes';
+  import Selections from './components/Selections';
 
   export default {
     name: 'Sample',
@@ -45,6 +48,7 @@
       Tags,
       Inputs,
       Checkboxes,
+      Selections,
     },
     created() {},
     data() {

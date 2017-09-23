@@ -10,6 +10,8 @@ import Input from './components/Input';
 import Form from './components/Form';
 import Checkbox from './components/Checkbox';
 import CheckboxGroup from './components/CheckboxGroup';
+import Select from './components/Select';
+import Option from './components/Option';
 
 export default {
   install(Vue) {
@@ -28,6 +30,8 @@ export default {
         LibForm: Form,
         LibCheckbox: Checkbox,
         LibCheckboxGroup: CheckboxGroup,
+        LibSelect: Select,
+        LibOption: Option,
       },
       methods: {
         $alert(options) {

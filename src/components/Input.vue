@@ -1,5 +1,5 @@
 <template>
-  <div class="lib-input flex flex-row flex-nowrap items-stretch justify-start ba bw1 br2 overflow-hidden">
+  <div class="lib-input flex flex-row flex-nowrap items-stretch justify-start ba bw1 br2 overflow-hidden" :class="[cursor]">
     <label
       v-if="left && (icon || label)"
       :class="[sizeStyle, labelStyle, 'br']"
@@ -10,7 +10,7 @@
       {{label}}
     </label>
     <input
-      :class="[sizeStyle, 'items-center flex-grow-2 bn ph2 pv1']"
+      :class="[sizeStyle, 'items-center flex-grow-2 bn ph2 pv1', cursor]"
       :value="currentValue"
       :name="name"
       :type="type"
@@ -21,6 +21,7 @@
       @input="handleInput"
       @focus="handleFocus"
       @blur="handleBlur"
+      autocomplete="off"
     />
     <label
       :class="[sizeStyle, labelStyle, 'bl']"
@@ -59,6 +60,10 @@
       pattern: String,
       disabled: Boolean,
       readonly: Boolean,
+      cursor: {
+        type: String,
+        default: '',
+      },
     },
     data() {
       return {

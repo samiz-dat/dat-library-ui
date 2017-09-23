@@ -23,7 +23,8 @@
     "tachyons": "^4.8.1",
     "tachyons-sass": "^4.7.4",
     "vue": "^2.4.2",
-    "vue-pass-props": "^1.0.0"
+    "vue-pass-props": "^1.0.0",
+    "vue-popperjs": "^1.1.6"
   },
   "devDependencies": {
     "babel-core": "^6.22.1",
