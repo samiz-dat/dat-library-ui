@@ -13,6 +13,7 @@ import CheckboxGroup from './components/CheckboxGroup';
 
 export default {
   install(Vue) {
+    const LibNotification = Vue.extend(Notification);
     Vue.mixin({
       components: {
         LibProgress: Progress,
@@ -21,7 +22,7 @@ export default {
         LibButtonGroup: ButtonGroup,
         LibMenu: Menu,
         LibMenuItem: MenuItem,
-        LibNotification: Vue.extend(Notification),
+        LibNotification,
         LibLoader: Loader,
         LibTag: Tag,
         LibForm: Form,
@@ -30,7 +31,7 @@ export default {
       },
       methods: {
         $alert(options) {
-          return new Notification({
+          return new LibNotification({
             el: document.createElement('div'),
             propsData: options,
           });
