@@ -16,7 +16,7 @@
       readonly
     ></lib-input>
     <div
-      class="mt1 ba bw1 b--black bg-white br2 w-100"
+      class="mt1 ba bw1 b--black bg-white br2 w-100 z-9999"
       :class="[sizeStyle]"
     >
       <slot></slot>

@@ -27,6 +27,6 @@ export default {
     }),
   ],
   dest: 'dist/bundle.js',
-  external: ['lodash'],
+  external: ['lodash', 'prismjs'],
   sourceMap: process.env.NODE_ENV !== 'production',
 };

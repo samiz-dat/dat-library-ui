@@ -29,9 +29,6 @@
       currentLabel() {
         return this.label || (this.isObject ? '' : this.value);
       },
-      currentValue() {
-        return this.value || this.label || '';
-      },
       parent() {
         let parent = this.$parent;
         while (parent) {
@@ -47,7 +44,7 @@
     methods: {
       selectOptionClick() {
         if (this.parent && this.parent.select) {
-          this.parent.select(this.currentValue, this.currentLabel);
+          this.parent.select(this.value, this.currentLabel);
         }
       },
     },

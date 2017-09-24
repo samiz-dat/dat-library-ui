@@ -12,6 +12,7 @@ import Checkbox from './components/Checkbox';
 import CheckboxGroup from './components/CheckboxGroup';
 import Select from './components/Select';
 import Option from './components/Option';
+import SourceCode from './components/SourceCode';
 
 export default {
   install(Vue) {
@@ -32,6 +33,7 @@ export default {
         LibCheckboxGroup: CheckboxGroup,
         LibSelect: Select,
         LibOption: Option,
+        LibSourceCode: SourceCode,
       },
       methods: {
         $alert(options) {

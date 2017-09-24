@@ -15,6 +15,7 @@
         <lib-menu-item link="#inputfields">Inputs</lib-menu-item>
         <lib-menu-item link="#selections">Selections</lib-menu-item>
         <lib-menu-item link="#checkboxs">Checkboxes</lib-menu-item>
+        <lib-menu-item link="#sourcecode">Source Code Views</lib-menu-item>
       </lib-menu>
     </div>
     <progress-bars/>
@@ -25,6 +26,7 @@
     <inputs/>
     <selections/>
     <checkboxes/>
+    <source-code-views/>
   </div>
 </template>
 
@@ -37,6 +39,7 @@
   import Inputs from './components/Inputs';
   import Checkboxes from './components/Checkboxes';
   import Selections from './components/Selections';
+  import SourceCodeViews from './components/SourceCodeViews';
 
   export default {
     name: 'Sample',
@@ -49,6 +52,7 @@
       Inputs,
       Checkboxes,
       Selections,
+      SourceCodeViews,
     },
     created() {},
     data() {
