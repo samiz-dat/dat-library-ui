@@ -16,6 +16,7 @@
         <lib-menu-item link="#selections">Selections</lib-menu-item>
         <lib-menu-item link="#checkboxs">Checkboxes</lib-menu-item>
         <lib-menu-item link="#sourcecode">Source Code Views</lib-menu-item>
+        <lib-menu-item link="#dialog-boxes">Dialog Boxes</lib-menu-item>
       </lib-menu>
     </div>
     <progress-bars/>
@@ -27,6 +28,7 @@
     <selections/>
     <checkboxes/>
     <source-code-views/>
+    <dialog-boxes/>
   </div>
 </template>
 
@@ -40,6 +42,7 @@
   import Checkboxes from './components/Checkboxes';
   import Selections from './components/Selections';
   import SourceCodeViews from './components/SourceCodeViews';
+  import DialogBoxes from './components/DialogBoxes';
 
   export default {
     name: 'Sample',
@@ -53,6 +56,7 @@
       Checkboxes,
       Selections,
       SourceCodeViews,
+      DialogBoxes,
     },
     created() {},
     data() {

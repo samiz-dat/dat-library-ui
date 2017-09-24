@@ -13,6 +13,7 @@ import CheckboxGroup from './components/CheckboxGroup';
 import Select from './components/Select';
 import Option from './components/Option';
 import SourceCode from './components/SourceCode';
+import Dialog from './components/Dialog';
 
 export default {
   install(Vue) {
@@ -34,6 +35,7 @@ export default {
         LibSelect: Select,
         LibOption: Option,
         LibSourceCode: SourceCode,
+        LibDialog: Dialog,
       },
       methods: {
         $alert(options) {
