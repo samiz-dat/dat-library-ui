@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 id="dialog-boxes">Dialog Boxes</h2>
-    <lib-button @click="visible = true">Open</lib-button>
+    <lib-button @click.stop.prevent="visible = true">Open</lib-button>
     <lib-dialog :visible.sync="visible">
       <h1>Hello</h1>
       <lib-button @click="visible = false">Close</lib-button>
