@@ -17,6 +17,7 @@
         <lib-menu-item link="#checkboxs">Checkboxes</lib-menu-item>
         <lib-menu-item link="#sourcecode">Source Code Views</lib-menu-item>
         <lib-menu-item link="#dialog-boxes">Dialog Boxes</lib-menu-item>
+        <lib-menu-item link="#badges">Badges</lib-menu-item>
       </lib-menu>
     </div>
     <progress-bars/>
@@ -29,6 +30,7 @@
     <checkboxes/>
     <source-code-views/>
     <dialog-boxes/>
+    <badges/>
   </div>
 </template>
 
@@ -43,6 +45,7 @@
   import Selections from './components/Selections';
   import SourceCodeViews from './components/SourceCodeViews';
   import DialogBoxes from './components/DialogBoxes';
+  import Badges from './components/Badges';
 
   export default {
     name: 'Sample',
@@ -57,6 +60,7 @@
       Selections,
       SourceCodeViews,
       DialogBoxes,
+      Badges,
     },
     created() {},
     data() {

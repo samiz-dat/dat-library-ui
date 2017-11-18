@@ -1,5 +1,6 @@
 import Progress from './components/Progress';
 import Button from './components/Button';
+import Badge from './components/Badge';
 import ButtonGroup from './components/ButtonGroup';
 import Tag from './components/Tag';
 import Menu from './components/Menu';
@@ -24,6 +25,7 @@ export default {
         LibInput: Input,
         LibButton: Button,
         LibButtonGroup: ButtonGroup,
+        LibBadge: Badge,
         LibMenu: Menu,
         LibMenuItem: MenuItem,
         LibNotification,

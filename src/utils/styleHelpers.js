@@ -17,6 +17,7 @@ const statusMap = {
 };
 
 const sizeMap = {
+  'xx-small': 'f7',
   'x-small': 'f6',
   small: 'f5',
   medium: 'f4',
