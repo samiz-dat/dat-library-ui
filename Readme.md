@@ -17,13 +17,13 @@ To do:
 - [x] Check lists (without style)
 - [x] Selection
 - [X] Code highlighting display element
+- [x] Badges (eg. for peer count etc)
 - [ ] Style checkboxs
 - [ ] Add button / hover style to inputs
 - [ ] Radio Button
 - [ ] Basic layout Components (eg sidebar, row, etc)
 - [ ] Pagination elements
 - [ ] Pop up modal
-- [ ] Badges (eg. for peer count etc)
 - [ ] Accordion Item (for library data)
 - [ ] Table structure (for displaying book/author data)
 - [ ] Grouped Lists
