@@ -1,5 +1,7 @@
 # Dat Library UI Elements
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/samiz-dat/dat-library-ui.svg)](https://greenkeeper.io/)
+
 This is a work in progress.
 
 To do:
